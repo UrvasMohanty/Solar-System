@@ -1,0 +1,88 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body {
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  background:#000;
+  color: white;
+  font-family: sans-serif;
+  transition: background 0.5s, color 0.5s;
+}
+
+body.light {
+  background: #f5f5f5;
+  color: black;
+}
+
+.container {
+  position:relative;
+  width:100vw;
+  height:100vh;
+}
+
+.sun {
+  position:absolute;
+  top:50%; left:50%;
+  width:200px; height:200px;
+  transform: translate(-50%,-50%);
+  border-radius:50%;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/6/67/Largest_Solar_Flare_Since_2017_Spotted_on_the_Sun_%2849983663618%29.jpg') center/cover;
+  box-shadow: 0 0 60px 30px rgba(255,140,0,0.6);
+}
+
+.orbit {
+  position:absolute;
+  top:50%; left:50%;
+  transform: translate(-50%,-50%);
+  border:1px dashed rgba(255,255,255,0.3);
+  border-radius:50%;
+}
+
+.orbit1 { width:200px; height:200px; }
+.orbit2 { width:300px; height:300px; }
+.orbit3 { width:400px; height:400px; }
+.orbit4 { width:500px; height:500px; }
+.orbit5 { width:600px; height:600px; }
+.orbit6 { width:700px; height:700px; }
+.orbit7 { width:800px; height:800px; }
+.orbit8 {width:900px; height:900px;}
+
+.planet {
+  position:absolute;
+  border-radius:50%;
+  background-size:cover;
+  background-position:center;
+  opacity:0.9;
+}
+#planet1 { width:20px; height:20px; background-image:url('https://upload.wikimedia.org/wikipedia/commons/4/4a/Mercury_in_true_color.jpg'); }
+#planet2 { width:30px; height:30px; background-image:url('https://upload.wikimedia.org/wikipedia/commons/e/e5/Venus-real_color.jpg'); }
+#planet3 { width:40px; height:40px; background-image:url('https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg'); }
+#planet4 { width:35px; height:35px; background-image:url('https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg'); }
+#planet5 { width:70px; height:70px; background-image:url('https://upload.wikimedia.org/wikipedia/commons/e/e2/Jupiter.jpg'); }
+#planet6 { width:60px; height:60px; background-image:url('https://upload.wikimedia.org/wikipedia/commons/c/c7/Saturn_during_Equinox.jpg'); }
+#planet7 { width:55px; height:55px; background-image:url('https://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg'); }
+#planet8 { width:50px; height:50px; background-image:url('https://upload.wikimedia.org/wikipedia/commons/5/56/Neptune_Full.jpg'); }
+
+.controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.6);
+  padding: 10px 20px;
+  border-radius: 12px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  color: white;
+}
+
+body.light .controls {
+  background: rgba(255,255,255,0.7);
+  color: black;
+}
+
+.controls button,
+.controls input[type=range] {
+  cursor: pointer;
+}
